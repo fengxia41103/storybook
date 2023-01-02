@@ -1,0 +1,24 @@
+{
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": false,
+  "printWidth": 80,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "importOrder": ["^@ant", "^@/(.*)$", "^[.]{2}/", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "parser": "typescript",
+  "overrides": [{
+    "files": "*.css",
+    "options": {
+      "parser": "css"
+    }
+  },{
+    "files": "*.scss",
+    "options": {
+      "parser": "scss"
+    }
+  }]
+}

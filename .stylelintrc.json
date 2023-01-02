@@ -1,0 +1,11 @@
+{
+  "extends": ["stylelint-config-standard",
+              "stylelint-config-prettier",
+              "stylelint-config-standard-scss"],
+  "plugins": [
+    "stylelint-no-unused-selectors"
+  ],
+  "rules": {
+    "plugin/no-unused-selectors": true
+  }
+}
