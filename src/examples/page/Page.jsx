@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Header from "../header/Header";
+
 import "./page.css";
 
 const Page = (props) => {
