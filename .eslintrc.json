@@ -10,7 +10,6 @@
     "airbnb",
     "plugin:import/typescript",
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:json/recommended"
   ],
