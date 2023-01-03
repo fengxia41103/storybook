@@ -3704,7 +3704,7 @@
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/utils@5.48.0", "@typescript-eslint/utils@^5.13.0", "@typescript-eslint/utils@^5.45.0":
+"@typescript-eslint/utils@5.48.0", "@typescript-eslint/utils@^5.10.0", "@typescript-eslint/utils@^5.13.0", "@typescript-eslint/utils@^5.45.0":
   version "5.48.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-5.48.0.tgz#eee926af2733f7156ad8d15e51791e42ce300273"
   integrity sha512-x2jrMcPaMfsHRRIkL+x96++xdzvrdBCnYRd5QiW5Wgo1OB4kDYPbC1XjWP/TNqlfK93K/lUL92erq5zPLgFScQ==
@@ -6814,6 +6814,13 @@ eslint-plugin-jest@^25.3.0:
   integrity sha512-PWLUEXeeF7C9QGKqvdSbzLOiLTx+bno7/HC9eefePfEb257QFHg7ye3dh80AZVkaa/RQsBB1Q/ORQvg2X7F0NQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "^5.0.0"
+
+eslint-plugin-jest@^27.2.0:
+  version "27.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.2.0.tgz#8e9976705642bea1981596c0ba5e3f46d449f3fc"
+  integrity sha512-KGIYtelk4rIhKocxRKUEeX+kJ0ZCab/CiSgS8BMcKD7AY7YxXhlg/d51oF5jq2rOrtuJEDYWRwXD95l6l2vtrA==
+  dependencies:
+    "@typescript-eslint/utils" "^5.10.0"
 
 eslint-plugin-jsx-a11y@^6.5.1:
   version "6.6.1"
