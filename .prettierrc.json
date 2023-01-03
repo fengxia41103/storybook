@@ -6,7 +6,7 @@
   "printWidth": 80,
   "bracketSpacing": true,
   "arrowParens": "always",
-  "importOrder": ["^@ant", "^@/(.*)$", "^[.]{2}/", "^[./]"],
+  "importOrder": ["^@mui", "^@/(.*)$", "^[.]{2}/", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "overrides": [{
