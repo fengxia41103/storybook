@@ -9,7 +9,6 @@
   "importOrder": ["^@ant", "^@/(.*)$", "^[.]{2}/", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "parser": "typescript",
   "overrides": [{
     "files": "*.css",
     "options": {

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { Header } from "../header/Header";
+import Header from "../header/Header";
 import "./page.css";
 
-export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
+const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <article>
     <Header
       user={user}
@@ -16,15 +16,15 @@ export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
     <section>
       <h2>Pages in Storybook</h2>
       <p>
-        We recommend building UIs with a{" "}
+        We recommend building UIs with a&nbsp;
         <a
           href="https://componentdriven.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           <strong>component-driven</strong>
-        </a>{" "}
-        process starting with atomic components and ending with pages.
+        </a>
+        &nbsp; process starting with atomic components and ending with pages.
       </p>
       <p>
         Render pages with mock data. This makes it easy to build and review page
@@ -34,7 +34,7 @@ export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
       <ul>
         <li>
           Use a higher-level connected component. Storybook helps you compose
-          such data from the "args" of child component stories
+          such data from the `args` of child component stories
         </li>
         <li>
           Assemble data in the page component from your services. You can mock
@@ -42,7 +42,7 @@ export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
         </li>
       </ul>
       <p>
-        Get a guided tutorial on component-driven development at{" "}
+        Get a guided tutorial on component-driven development at&nbsp;
         <a
           href="https://storybook.js.org/tutorials/"
           target="_blank"
@@ -50,7 +50,7 @@ export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
         >
           Storybook tutorials
         </a>
-        . Read more in the{" "}
+        . Read more in the&nbsp;
         <a
           href="https://storybook.js.org/docs"
           target="_blank"
@@ -61,7 +61,8 @@ export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
         .
       </p>
       <div className="tip-wrapper">
-        <span className="tip">Tip</span> Adjust the width of the canvas with the{" "}
+        <span className="tip">Tip</span>
+        Adjust the width of the canvas with the&nbsp;
         <svg
           width="10"
           height="10"
@@ -91,3 +92,5 @@ Page.propTypes = {
 Page.defaultProps = {
   user: null,
 };
+
+export default Page;
