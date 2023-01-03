@@ -1,21 +1,21 @@
+import { ArcElement, Chart } from "chart.js";
 import { isUndefined } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
-import { Chart, ArcElement } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
+import TrendingDownIcon from "@mui/icons-material/TrendingDown";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import {
   Box,
   Card,
   CardContent,
   CardHeader,
-  colors,
   Grid,
   Typography,
+  colors,
   useTheme,
 } from "@mui/material";
-import TrendingDownIcon from "@mui/icons-material/TrendingDown";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 
 // MUST: https://stackoverflow.com/questions/70098392/react-chartjs-2-with-chartjs-3-error-arc-is-not-a-registered-element
 Chart.register(ArcElement);
