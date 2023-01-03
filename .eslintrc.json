@@ -44,11 +44,6 @@
         "tsx": "never"
       }
     ],
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    },
     "react/jsx-props-no-spreading":[0],
     "react/function-component-definition":
     [2,
@@ -57,5 +52,10 @@
      }
     ],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }

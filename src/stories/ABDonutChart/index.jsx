@@ -103,7 +103,7 @@ const ABDonutChart = (props) => {
                   </Typography>
                   <Typography style={{ color }} variant="h2">
                     {value}
-                    &percnt;
+                    &nbsp;%
                   </Typography>
                 </Box>
               ))}
