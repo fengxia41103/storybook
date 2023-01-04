@@ -6,7 +6,9 @@ import HighchartGraph from "../HighchartGraph";
 
 const TimeSeriesColumnChart = (props) => {
   const { data, name } = props;
+
   const categories = map(data, (d) => d.on);
+
   const chart_data = [
     {
       name,
