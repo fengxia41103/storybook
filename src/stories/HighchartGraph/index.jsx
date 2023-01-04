@@ -215,12 +215,13 @@ const HighchartGraph = (props) => {
 HighchartGraph.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  footer: PropTypes.string,
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
-  xLabel: PropTypes.string,
-  yLabel: PropTypes.string,
   legendEnabled: PropTypes.bool.isRequired,
   data: PropTypes.arrayOf(PropTypes.node).isRequired,
+
+  footer: PropTypes.string,
+  xLabel: PropTypes.string,
+  yLabel: PropTypes.string,
   normalize: PropTypes.bool,
   keepNegative: PropTypes.bool,
 };
