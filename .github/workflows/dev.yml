@@ -42,8 +42,4 @@ jobs:
       - run: yarn semantic-release
         env:
           GH_TOKEN: ${{ github.token }}
-
-      # build & publish to pkg registry
-      # - run: yarn publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ github.token }}
+          NODE_AUTH_TOKEN: ${{ github.token }}
