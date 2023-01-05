@@ -6,7 +6,6 @@ import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
 import postcssImport from "postcss-import";
 import postcss from "rollup-plugin-postcss";
-import typescript from "rollup-plugin-typescript2";
 
 const lessToJs = require("less-vars-to-js");
 
@@ -14,7 +13,7 @@ const path = require("path");
 const fs = require("fs");
 
 export default {
-  input: "src/index.ts",
+  input: "index.js",
   output: [
     {
       file: "dist/index.js",
@@ -28,9 +27,19 @@ export default {
   // All the used libs needs to be here
   external: ["react", "react-proptypes"],
   plugins: [
-    typescript({ useTsconfigDeclarationDir: true }),
+    commonjs(),
+    nodeResolve({
+      main: true,
+      extensions: [".jsx"],
+      preferBuiltins: false,
+    }),
+    babel({
+      exclude: "./node_modules/**",
+      presets: ["@babel/preset-env", "@babel/preset-react"],
+      plugins: ["@babel/plugin-transform-runtime"],
+      babelHelpers: "runtime",
+    }),
     json(),
-    nodeResolve(),
     postcss({
       config: false,
       plugins: [postcssImport()],
@@ -46,15 +55,7 @@ export default {
         ],
       ],
     }),
-    babel({
-      plugins: [["import", { libraryName: "antd", style: true }]],
-      exclude: ["node_modules/**", "public/**"],
-      presets: ["@babel/preset-react"],
-    }),
     url(),
     svgr({ svgo: false }),
-    commonjs({
-      include: "node_modules/**",
-    }),
   ],
 };
