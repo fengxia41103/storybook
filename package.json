@@ -53,6 +53,10 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-url": "^6.0.0",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^9.0.1",
     "@storybook/addon-actions": "^6.5.7",
     "@storybook/addon-essentials": "^6.5.7",
     "@storybook/addon-interactions": "^6.5.7",
@@ -130,7 +134,6 @@
   },
   "main": "index.js",
   "name": "@fengxia41103/storybook",
-  "private": true,
   "publishConfig": {
     "directory": "dist",
     "registry": "https://npm.pkg.github.com"
@@ -138,7 +141,17 @@
   "release": {
     "branches": [
       "main",
-      "dev"
+      {
+        "name": "dev",
+        "channel": "beta",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/git"
     ]
   },
   "repository": {
@@ -157,5 +170,5 @@
     "storybook": "start-storybook -p 6006",
     "test": "react-scripts test"
   },
-  "version": "0.0.0-development"
+  "version": "1.0.0-dev"
 }
