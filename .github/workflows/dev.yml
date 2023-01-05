@@ -1,4 +1,4 @@
-name: Publish package to GitHub Packages
+name: Release dev as beta
 on:
   push:
     branches:
