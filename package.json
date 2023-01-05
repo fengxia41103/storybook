@@ -117,6 +117,9 @@
       }
     ]
   },
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/fengxia41103/storybook#readme",
   "license": "MIT",
   "lint-staged": {
@@ -128,6 +131,16 @@
   "main": "index.js",
   "name": "@fengxia41103/storybook",
   "private": true,
+  "publishConfig": {
+    "directory": "dist",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "dev"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/fengxia41103/storybook.git"
@@ -139,16 +152,10 @@
     "eject": "react-scripts eject",
     "init-msw": "msw init public/",
     "prepare": "husky install",
+    "semantic-release": "semantic-release",
     "start": "react-scripts start",
     "storybook": "start-storybook -p 6006",
-    "test": "react-scripts test",
-    "semantic-release": "semantic-release"
+    "test": "react-scripts test"
   },
-  "version": "0.0.0-development",
-  "release": {
-    "branches": [
-      "main",
-      "dev"
-    ]
-  }
+  "version": "0.0.0-development"
 }
