@@ -147,7 +147,7 @@
   "version": "0.0.0-development",
   "release": {
     "branches": [
-      "master",
+      "main",
       "dev"
     ]
   }
