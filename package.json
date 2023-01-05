@@ -1,14 +1,14 @@
 {
-  "name": "intro-storybook-react-template",
-  "version": "0.1.0",
-  "description": "Starter template to get up and running quickly with React and Storybook",
-  "author": "Chromatic <https://chromatic.com/>",
+  "name": "@fengxia41103/storybook",
+  "version": "0.0.1",
+  "description": "My UI comopnent library",
+  "author": "Feng Xia",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chromaui/intro-storybook-react-template"
+    "url": "git+https://github.com/fengxia41103/storybook.git"
   },
   "bugs": {
-    "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
+    "url": "https://github.com/fengxia41103/storybook/issues"
   },
   "license": "MIT",
   "private": true,
