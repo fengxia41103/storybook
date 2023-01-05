@@ -1,17 +1,20 @@
 {
-  "name": "@fengxia41103/storybook",
-  "version": "0.0.1",
-  "description": "My UI comopnent library",
   "author": "Feng Xia",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fengxia41103/storybook.git"
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
   },
   "bugs": {
     "url": "https://github.com/fengxia41103/storybook/issues"
   },
-  "license": "MIT",
-  "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -39,45 +42,7 @@
     "web-vitals": "^2.1.0",
     "yarn": "^1.22.19"
   },
-  "scripts": {
-    "build": "react-scripts build",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "init-msw": "msw init public/",
-    "prepare": "husky install",
-    "build:rollup": "rollup -c"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "description": "My UI comopnent library",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^7.20.7",
@@ -135,10 +100,47 @@
     "typescript": "^4.9.4",
     "webpack": "^5.73.0"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "homepage": "https://github.com/fengxia41103/storybook#readme",
+  "license": "MIT",
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --ignore-unknown --write",
       "eslint --cache --fix"
     ]
-  }
+  },
+  "main": "index.js",
+  "name": "@fengxia41103/storybook",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxia41103/storybook.git"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "build-storybook": "build-storybook",
+    "build:rollup": "rollup -c",
+    "eject": "react-scripts eject",
+    "init-msw": "msw init public/",
+    "prepare": "husky install",
+    "start": "react-scripts start",
+    "storybook": "start-storybook -p 6006",
+    "test": "react-scripts test"
+  },
+  "version": "0.0.1"
 }
