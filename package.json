@@ -53,6 +53,11 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-url": "^6.0.0",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^9.0.1",
     "@storybook/addon-actions": "^6.5.7",
     "@storybook/addon-essentials": "^6.5.7",
     "@storybook/addon-interactions": "^6.5.7",
@@ -117,6 +122,9 @@
       }
     ]
   },
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/fengxia41103/storybook#readme",
   "license": "MIT",
   "lint-staged": {
@@ -127,7 +135,46 @@
   },
   "main": "index.js",
   "name": "@fengxia41103/storybook",
-  "private": true,
+  "publishConfig": {
+    "directory": "dist",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "dev",
+        "channel": "beta",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "test ${branch.type} != release || sed -i '/^## \\[/h;x;/^[^]]*-/{x;d};x' CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md"
+          ]
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/fengxia41103/storybook.git"
@@ -139,16 +186,10 @@
     "eject": "react-scripts eject",
     "init-msw": "msw init public/",
     "prepare": "husky install",
+    "semantic-release": "semantic-release",
     "start": "react-scripts start",
     "storybook": "start-storybook -p 6006",
-    "test": "react-scripts test",
-    "semantic-release": "semantic-release"
+    "test": "react-scripts test"
   },
-  "version": "0.0.0-development",
-  "release": {
-    "branches": [
-      "master",
-      "dev"
-    ]
-  }
+  "version": "1.0.0-dev.1"
 }

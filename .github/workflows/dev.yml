@@ -1,0 +1,45 @@
+name: Release dev as beta
+on:
+  push:
+    branches:
+      - "dev"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      # Must check out head ref
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+
+      # setup github user identity
+      - uses: fregante/setup-git-user@v1
+
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.15"
+          registry-url: 'https://npm.pkg.github.com'
+          cache: "yarn"
+
+          # Defaults to the user or organization that owns the workflow file
+          scope: 'fengxia41103'
+
+      - run: yarn install
+
+      - run: yarn build:rollup
+
+      - run: yarn test
+
+      # standard-version prerelease to bump versioin
+      - run: yarn semantic-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NODE_AUTH_TOKEN: ${{ github.token }}
