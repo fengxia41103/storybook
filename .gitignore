@@ -25,3 +25,7 @@ yarn-error.log*
 
 # emacs
 *~
+
+# rollup
+/dist
+/lib
