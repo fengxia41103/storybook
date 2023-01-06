@@ -133,7 +133,6 @@
       "eslint --cache --fix"
     ]
   },
-  "main": "index.js",
   "name": "@fengxia41103/storybook",
   "publishConfig": {
     "directory": "dist",
@@ -155,12 +154,6 @@
         "@semantic-release/changelog",
         {
           "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      [
-        "@semantic-release/exec",
-        {
-          "prepareCmd": "test ${branch.type} != release || sed -i '/^## \\[/h;x;/^[^]]*-/{x;d};x' CHANGELOG.md"
         }
       ],
       "@semantic-release/npm",
@@ -191,5 +184,5 @@
     "storybook": "start-storybook -p 6006",
     "test": "react-scripts test"
   },
-  "version": "1.0.0-dev.1"
+  "version": "1.0.0-dev.2"
 }
