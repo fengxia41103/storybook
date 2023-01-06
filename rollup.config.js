@@ -1,32 +1,34 @@
 import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import resolve, { nodeResolve } from "@rollup/plugin-node-resolve";
 import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
 import postcssImport from "postcss-import";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 
-const lessToJs = require("less-vars-to-js");
-
-const path = require("path");
-const fs = require("fs");
+const packageJson = require("./package.json");
 
 export default {
   input: "index.js",
   output: [
     {
-      file: "dist/index.js",
-      format: "esm",
+      file: packageJson.main,
+      format: "cjs",
+      sourcemap: true,
     },
     {
-      file: "dist/index.cjs.js",
-      format: "cjs",
+      file: packageJson.module,
+      format: "esm",
+      sourcemap: true,
     },
   ],
   // All the used libs needs to be here
   external: ["react", "react-proptypes"],
   plugins: [
+    peerDepsExternal(),
+    resolve(),
     commonjs(),
     nodeResolve({
       main: true,
