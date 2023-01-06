@@ -1,3 +1,10 @@
+# [1.0.0-dev.3](https://github.com/fengxia41103/storybook/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2023-01-06)
+
+
+### Features
+
+* Remove main.js ([48f6c5d](https://github.com/fengxia41103/storybook/commit/48f6c5d9add5d27c3cb761002ebd7715f07e4a27))
+
 # [1.0.0-dev.2](https://github.com/fengxia41103/storybook/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2023-01-06)
 
 
