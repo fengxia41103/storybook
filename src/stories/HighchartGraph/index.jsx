@@ -124,6 +124,14 @@ const HighchartGraph = (props) => {
             enabled: false,
           },
         },
+        pie: {
+          allowPointSelect: true,
+          cursor: "pointer",
+          dataLabels: {
+            enabled: true,
+            format: "<b>{point.name}</b>: {point.percentage:.1f} %",
+          },
+        },
         column: {
           pointPadding: 0.2,
           borderWidth: 0,
