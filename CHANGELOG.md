@@ -1,3 +1,10 @@
+# [1.0.0-dev.2](https://github.com/fengxia41103/storybook/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2023-01-06)
+
+
+### Features
+
+* Add components to export ([904919a](https://github.com/fengxia41103/storybook/commit/904919a8fa8b40c49252ab86e4b52421108e7caf))
+
 # 1.0.0-dev.1 (2023-01-06)
 
 
