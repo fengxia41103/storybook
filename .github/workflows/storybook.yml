@@ -1,0 +1,43 @@
+name: Deploy storybook as github page
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Must check out head ref
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+
+      # setup github user identity
+      - uses: fregante/setup-git-user@v1
+
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.15"
+          registry-url: 'https://npm.pkg.github.com'
+          cache: "yarn"
+
+          # Defaults to the user or organization that owns the workflow file
+          scope: 'fengxia41103'
+
+      - run: yarn install
+
+      - run: yarn build-storybook
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ github.token }}
+          BRANCH: gh-pages
+          FOLDER: storybook-static
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+          single-commit: true
+          commit-message: "docs: Deploy github page [skip ci]"
