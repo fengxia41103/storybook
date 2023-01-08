@@ -7,6 +7,7 @@ import CountCards from "./src/stories/CountCards";
 import DictCard from "./src/stories/DictCard";
 import DictTable from "./src/stories/DictTable";
 import DropdownMenu from "./src/stories/DropdownMenu";
+import Get from "./src/stories/Get";
 import GlobalStyles from "./src/stories/GlobalStyles";
 import HighchartGraph from "./src/stories/HighchartGraph";
 import HighlightedText from "./src/stories/HighlightedText";
@@ -48,4 +49,5 @@ export {
   ShowResource,
   SimpleSnackbar,
   TimeSeriesColumnChart,
+  Get,
 };
