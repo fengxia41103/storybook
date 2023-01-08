@@ -34,6 +34,7 @@ export {
   DictCard,
   DictTable,
   DropdownMenu,
+  Get,
   GlobalStyles,
   HighchartGraph,
   HighlightedText,
@@ -49,5 +50,4 @@ export {
   ShowResource,
   SimpleSnackbar,
   TimeSeriesColumnChart,
-  Get,
 };
