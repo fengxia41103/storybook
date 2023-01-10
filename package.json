@@ -99,6 +99,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-less": "^1.1.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-polyfill-node": "^0.11.0",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-typescript2": "^0.30.0",
@@ -135,6 +136,7 @@
     ]
   },
   "name": "@fengxia41103/storybook",
+  "main": "lib/index.js",
   "publishConfig": {
     "directory": "lib",
     "registry": "https://npm.pkg.github.com"
@@ -186,7 +188,6 @@
     "test": "react-scripts test"
   },
   "version": "1.0.0-dev.2",
-  "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.js"
 }
