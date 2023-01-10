@@ -6,6 +6,7 @@ import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
 import postcssImport from "postcss-import";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import nodePolyfills from "rollup-plugin-polyfill-node";
 import postcss from "rollup-plugin-postcss";
 
 const packageJson = require("./package.json");
@@ -35,11 +36,12 @@ export default {
       extensions: [".jsx"],
       preferBuiltins: false,
     }),
+    nodePolyfills(),
     babel({
       exclude: "./node_modules/**",
-      presets: ["@babel/preset-env", "@babel/preset-react"],
-      plugins: ["@babel/plugin-transform-runtime"],
-      babelHelpers: "runtime",
+      // presets: ["@babel/preset-env", "@babel/preset-react"],
+      // plugins: ["@babel/plugin-transform-runtime"],
+      // babelHelpers: "runtime",
     }),
     json(),
     postcss({
