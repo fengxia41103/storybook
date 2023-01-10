@@ -1,3 +1,10 @@
+# [1.0.0-dev.6](https://github.com/fengxia41103/storybook/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2023-01-10)
+
+
+### Features
+
+* Update rollup config ([735ea91](https://github.com/fengxia41103/storybook/commit/735ea9134da68e476ba21e7ff08bef486293ddbe))
+
 # [1.0.0-dev.5](https://github.com/fengxia41103/storybook/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2023-01-08)
 
 
