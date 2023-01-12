@@ -34,7 +34,7 @@ jobs:
 
       - run: yarn install
 
-      - run: yarn build:rollup
+      - run: yarn rollup
 
       - run: yarn test
 
