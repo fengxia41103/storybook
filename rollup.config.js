@@ -39,9 +39,9 @@ export default {
     nodePolyfills(),
     babel({
       exclude: "./node_modules/**",
-      // presets: ["@babel/preset-env", "@babel/preset-react"],
-      // plugins: ["@babel/plugin-transform-runtime"],
-      // babelHelpers: "runtime",
+      presets: ["@babel/preset-env", "@babel/preset-react"],
+      plugins: ["@babel/plugin-transform-runtime"],
+      babelHelpers: "runtime",
     }),
     json(),
     postcss({

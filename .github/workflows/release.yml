@@ -34,6 +34,8 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn rollup
+
       # standard-version prerelease to bump versioin
       - run: yarn semantic-release
         env:
