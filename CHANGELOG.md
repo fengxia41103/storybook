@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/fengxia41103/storybook/compare/v1.0.0...v1.1.0) (2023-01-12)
+
+
+### Features
+
+* Add components to export ([5aa4942](https://github.com/fengxia41103/storybook/commit/5aa4942f9b8c43f4515354332f97e16b6e71caf6))
+* Add Get to export ([2b15574](https://github.com/fengxia41103/storybook/commit/2b1557487a05993c43500eda22f24b2f505ba741))
+* Export Get ([41d7a95](https://github.com/fengxia41103/storybook/commit/41d7a95016f281f5cb7bf18ce55e31b697190248))
+* Remove main.js ([e906f79](https://github.com/fengxia41103/storybook/commit/e906f79fcd0618db161874d4c0d9f1279f22a269))
+* Update rollup build config ([983c876](https://github.com/fengxia41103/storybook/commit/983c876888e5ecd7a9decfe500d6be7d81a584c2))
+* Update rollup config ([8d76c29](https://github.com/fengxia41103/storybook/commit/8d76c29d5df2dd5ee13cb61e5f17f9d23f140652))
+
 # 1.0.0 (2023-01-06)
 
 
