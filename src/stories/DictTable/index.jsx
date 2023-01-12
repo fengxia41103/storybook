@@ -84,15 +84,15 @@ const DictTable = (props) => {
 };
 
 DictTable.propTypes = {
-  interests: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  data: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
+  interests: PropTypes.node.isRequired,
+  data: PropTypes.arrayOf(PropTypes.node).isRequired,
   chart: PropTypes.bool.isRequired,
   normalized: PropTypes.bool,
 };
 
 Chart.propTypes = {
-  interests: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  data: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
+  interests: PropTypes.node.isRequired,
+  data: PropTypes.arrayOf(PropTypes.node).isRequired,
   normalized: PropTypes.bool.isRequired,
 };
 
