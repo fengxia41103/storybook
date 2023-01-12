@@ -101,18 +101,16 @@ AsVerticalStepper.propTypes = {
   steps: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
-      description: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.elementType,
-      ]).isRequired,
+      description: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+        .isRequired,
     }),
   ).isRequired,
 
   // the action when all steps are filled out
-  when_confirm: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType])
+  when_confirm: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
     .isRequired,
 
-  when_cancel: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType])
+  when_cancel: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
     .isRequired,
 };
 

@@ -39,7 +39,7 @@ const AsDialog = (props) => {
 AsDialog.propTypes = {
   // whatever triggers this dialog
   // most likely it's a string, but it can also be a button for example.
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]).isRequired,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 
   // dialog box title
   title: PropTypes.string.isRequired,
@@ -48,7 +48,7 @@ AsDialog.propTypes = {
   content: PropTypes.string.isRequired,
 
   // confirm action
-  when_confirm: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
+  when_confirm: PropTypes.node,
 };
 
 export default AsDialog;
