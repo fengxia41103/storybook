@@ -1,14 +1,15 @@
-# [1.1.0](https://github.com/fengxia41103/storybook/compare/v1.0.0...v1.1.0) (2023-01-12)
+# [1.1.0-dev.1](https://github.com/fengxia41103/storybook/compare/v1.0.0...v1.1.0-dev.1) (2023-01-12)
 
 
 ### Features
 
-* Add components to export ([5aa4942](https://github.com/fengxia41103/storybook/commit/5aa4942f9b8c43f4515354332f97e16b6e71caf6))
-* Add Get to export ([2b15574](https://github.com/fengxia41103/storybook/commit/2b1557487a05993c43500eda22f24b2f505ba741))
-* Export Get ([41d7a95](https://github.com/fengxia41103/storybook/commit/41d7a95016f281f5cb7bf18ce55e31b697190248))
-* Remove main.js ([e906f79](https://github.com/fengxia41103/storybook/commit/e906f79fcd0618db161874d4c0d9f1279f22a269))
-* Update rollup build config ([983c876](https://github.com/fengxia41103/storybook/commit/983c876888e5ecd7a9decfe500d6be7d81a584c2))
-* Update rollup config ([8d76c29](https://github.com/fengxia41103/storybook/commit/8d76c29d5df2dd5ee13cb61e5f17f9d23f140652))
+* Add components to export ([b56c0f3](https://github.com/fengxia41103/storybook/commit/b56c0f3f6123ed05ba6c1d9333f55fe15e71cb54))
+* Add Get to export ([32310fd](https://github.com/fengxia41103/storybook/commit/32310fdab7e8ef1e034cd64381101f798323c9ce))
+* Battle with rollup ([2a7297c](https://github.com/fengxia41103/storybook/commit/2a7297c6bedcc8b66c6ed8171a2482b533687dbb))
+* Export Get ([d5d7a7c](https://github.com/fengxia41103/storybook/commit/d5d7a7c56215ab17e5c1be1a5671aaec6d733e57))
+* Remove main.js ([87228fc](https://github.com/fengxia41103/storybook/commit/87228fc3648126d15b9ce78673c2cda280f5e01c))
+* Update rollup build config ([52c4a57](https://github.com/fengxia41103/storybook/commit/52c4a572f82f03eca4ab3952750c725eac4e36df))
+* Update rollup config ([2d5c35b](https://github.com/fengxia41103/storybook/commit/2d5c35b6a69ab8a357001b14197ba833d7924c94))
 
 # 1.0.0 (2023-01-06)
 
