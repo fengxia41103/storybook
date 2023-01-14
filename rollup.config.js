@@ -1,13 +1,12 @@
 import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
-import json from "@rollup/plugin-json";
 import resolve, { nodeResolve } from "@rollup/plugin-node-resolve";
+import replace from "@rollup/plugin-replace";
 import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
-import postcssImport from "postcss-import";
+import css from "rollup-plugin-import-css";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import nodePolyfills from "rollup-plugin-polyfill-node";
-import postcss from "rollup-plugin-postcss";
 
 const packageJson = require("./package.json");
 
@@ -30,11 +29,15 @@ export default {
   plugins: [
     peerDepsExternal(),
     resolve(),
-    commonjs(),
     nodeResolve({
-      main: true,
-      extensions: [".jsx"],
+      browser: true,
+      extensions: [".js", ".jsx"],
       preferBuiltins: false,
+    }),
+    commonjs(),
+    replace({
+      "process.env.NODE_ENV": JSON.stringify("development"),
+      preventAssignment: true,
     }),
     nodePolyfills(),
     babel({
@@ -43,23 +46,8 @@ export default {
       plugins: ["@babel/plugin-transform-runtime"],
       babelHelpers: "runtime",
     }),
-    json(),
-    postcss({
-      config: false,
-      plugins: [postcssImport()],
-      extract: true,
-      use: [
-        "sass",
-        [
-          "less",
-          {
-            javascriptEnabled: true,
-            // modifyVars: themeVariables,
-          },
-        ],
-      ],
-    }),
-    url(),
     svgr({ svgo: false }),
+    css(),
+    url(),
   ],
 };
