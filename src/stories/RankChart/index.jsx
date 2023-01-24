@@ -2,7 +2,7 @@ import { isInteger, map } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Stack } from "@mui/material";
 import blueGrey from "@mui/material/colors/blueGrey";
 
 const RankChart = (props) => {
@@ -24,12 +24,12 @@ const RankChart = (props) => {
     const width = `${(100 * val) / max_score}%`;
 
     return (
-      <Grid key={r.symbol} container spacing={1} alignItems="center">
+      <Grid key={r.symbol} container alignItems="center">
         <Grid item lg={3} sm={4} xs={5}>
           {make_label ? make_label(r) : r.symbol}
         </Grid>
         <Grid item lg={7} sm={6} xs={5}>
-          <Box height="10%" width={width} bgcolor={line_color} marginRight={2}>
+          <Box width={width} bgcolor={line_color} marginRight={2}>
             &nbsp;
           </Box>
         </Grid>
@@ -38,7 +38,7 @@ const RankChart = (props) => {
     );
   });
 
-  return the_chart;
+  return <Stack spacing={2}>{the_chart}</Stack>;
 };
 
 RankChart.propTypes = {
