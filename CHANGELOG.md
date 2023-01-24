@@ -1,3 +1,11 @@
+# [1.1.0-dev.2](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2023-01-24)
+
+
+### Features
+
+* Use react 18.2, set node env in rollup ([1a18e1e](https://github.com/fengxia41103/storybook/commit/1a18e1e07f28bac53693e0db0fb525a86f659b63))
+* Use styled for HighlightedText ([66aa378](https://github.com/fengxia41103/storybook/commit/66aa3782fa5a1d29ba055276e51078250dd83d74))
+
 # [1.1.0-dev.1](https://github.com/fengxia41103/storybook/compare/v1.0.0...v1.1.0-dev.1) (2023-01-12)
 
 
