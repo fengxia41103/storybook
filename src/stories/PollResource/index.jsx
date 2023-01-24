@@ -24,6 +24,8 @@ const PollResource = (props) => {
     until,
   } = props;
 
+  console.log(props);
+
   // helpers
   const on_error = () => <NotFoundView />;
 

@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from "lodash";
+import { isNull } from "lodash";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 
@@ -6,8 +6,8 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Box, IconButton, Menu, Typography } from "@mui/material";
 
 const DropdownMenu = (props) => {
-  const { title, content, keep_open } = props;
-  const [anchorEl, setAnchorEl] = useState(null);
+  const { title, content, keep_open = false } = props;
+  const [anchorEl, setAnchorEl] = useState("");
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -28,7 +28,7 @@ const DropdownMenu = (props) => {
         onClick={handleClick}
       >
         <MoreVertIcon />
-        <Typography>{isUndefined(title) ? null : title}</Typography>
+        <Typography>{title || null}</Typography>
       </IconButton>
       <Menu
         anchorEl={anchorEl}
@@ -36,7 +36,7 @@ const DropdownMenu = (props) => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <Box p={3} onClick={isUndefined(keep_open) ? handleClose : null}>
+        <Box p={3} onClick={keep_open ? handleClose : null}>
           {content}
         </Box>
       </Menu>
