@@ -7,13 +7,7 @@ import Page from "../Page";
 
 import PageNotFoundImage from "./assets/undraw_page_not_found_su7k.svg";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.background.dark,
-    height: "100%",
-    paddingBottom: theme.spacing(3),
-    paddingTop: theme.spacing(3),
-  },
+const useStyles = makeStyles(() => ({
   image: {
     marginTop: 50,
     display: "inline-block",
@@ -26,7 +20,7 @@ const NotFoundView = () => {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="404">
+    <Page title="404">
       <Box
         display="flex"
         flexDirection="column"
