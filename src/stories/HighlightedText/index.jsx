@@ -1,9 +1,8 @@
-import { isNil } from "lodash";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 
 import { Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { styled } from "@mui/material/styles";
 
 const HighlightedText = (props) => {
   const { highlights, text, val } = props;
@@ -12,31 +11,23 @@ const HighlightedText = (props) => {
   const handle_hide_toggle = () => setHide(!hide);
 
   // assing a special color to text I'm interested in
-  let bk_color = "";
-  let font_color = "";
-  if (!isNil(text)) {
-    bk_color = highlights.background;
-    font_color = highlights.font;
-  }
+  const { background: bk_color, font: font_color } = highlights;
 
-  const useStyles = makeStyles({
-    root: {
-      backgroundColor: bk_color,
-      color: font_color,
-    },
+  const MyTypography = styled(Typography)({
+    backgroundColor: bk_color,
+    color: font_color,
   });
-  const classes = useStyles();
 
   return (
-    <Typography
-      className={classes.root}
+    <MyTypography
+      data-testid="highlighted-text"
       onMouseOver={handle_hide_toggle}
       onMouseLeave={handle_hide_toggle}
       align="center"
     >
       {hide ? text : null}
       {!hide ? val.toFixed(2) : null}
-    </Typography>
+    </MyTypography>
   );
 };
 

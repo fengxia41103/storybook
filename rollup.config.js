@@ -25,7 +25,7 @@ export default {
     },
   ],
   // All the used libs needs to be here
-  external: ["react", "react-proptypes"],
+
   plugins: [
     peerDepsExternal(),
     resolve(),
@@ -50,4 +50,5 @@ export default {
     css(),
     url(),
   ],
+  external: ["react", "react-dom", "react-proptypes"],
 };
