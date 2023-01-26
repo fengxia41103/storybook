@@ -63,7 +63,7 @@ const CountCards = (props) => {
 };
 
 CountCards.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   count_by_lambda: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
 };
