@@ -4,6 +4,7 @@ import AsVerticalStepper from "./src/stories/AsVerticalStepper";
 import ColoredNumber from "./src/stories/ColoredNumber";
 // components
 import CountCards from "./src/stories/CountCards";
+import CountTable from "./src/stories/CountTable";
 import DictCard from "./src/stories/DictCard";
 import DictTable from "./src/stories/DictTable";
 import DropdownMenu from "./src/stories/DropdownMenu";
@@ -31,6 +32,7 @@ export {
   AsVerticalStepper,
   ColoredNumber,
   CountCards,
+  CountTable,
   DictCard,
   DictTable,
   DropdownMenu,
