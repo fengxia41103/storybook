@@ -1,3 +1,10 @@
+# [1.1.0-dev.3](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.2...v1.1.0-dev.3) (2023-01-26)
+
+
+### Features
+
+* Add D3PlusChart, CountTable ([11688ed](https://github.com/fengxia41103/storybook/commit/11688edeca8d82dc33ef67eeee8a6452a0fea1b0))
+
 # [1.1.0-dev.2](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2023-01-24)
 
 
