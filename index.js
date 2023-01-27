@@ -10,6 +10,7 @@ import DictTable from "./src/stories/DictTable";
 import DropdownMenu from "./src/stories/DropdownMenu";
 import Get from "./src/stories/Get";
 import GlobalStyles from "./src/stories/GlobalStyles";
+import Glossary from "./src/stories/Glossary";
 import HighchartGraph from "./src/stories/HighchartGraph";
 import HighlightedText from "./src/stories/HighlightedText";
 import LightTheme from "./src/stories/LightTheme";
@@ -52,4 +53,5 @@ export {
   ShowResource,
   SimpleSnackbar,
   TimeSeriesColumnChart,
+  Glossary,
 };

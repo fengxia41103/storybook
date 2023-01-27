@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import {
+  Link,
   Paper,
   Table,
   TableBody,
@@ -16,7 +17,7 @@ import { useTheme } from "@mui/material/styles";
 
 const CountTable = (props) => {
   // props
-  const { data, count_by_lambda, title } = props;
+  const { data, count_by_lambda, title, link_to_base = "" } = props;
 
   // hooks
   const { table } = useTheme();
@@ -31,6 +32,11 @@ const CountTable = (props) => {
         <TableRow key={key}>
           <TableCell>{key}</TableCell>
           <TableCell>{val}</TableCell>
+          <TableCell>
+            <Link href={`${link_to_base}/${key}`} underline="none">
+              &rarr;
+            </Link>
+          </TableCell>
         </TableRow>
       );
     },
@@ -44,8 +50,9 @@ const CountTable = (props) => {
         <Table style={table} size="small">
           <TableHead>
             <TableRow>
-              <TableCell>Data Source</TableCell>
-              <TableCell>Indicator Count</TableCell>
+              <TableCell>Category</TableCell>
+              <TableCell>Count</TableCell>
+              <TableCell>&nbsp;</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{rows}</TableBody>
@@ -59,6 +66,7 @@ CountTable.propTypes = {
   data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   count_by_lambda: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
+  link_to_base: PropTypes.string,
 };
 
 export default CountTable;
