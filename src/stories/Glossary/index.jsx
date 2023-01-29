@@ -40,7 +40,11 @@ const Glossary = (props) => {
 
     const descriptions = map(items, (aTerm) => (
       <ListItem key={aTerm.id} divider>
-        <GlossaryDT term={aTerm.name} description={aTerm.sourceNote} />
+        <GlossaryDT
+          term={aTerm.name}
+          description={aTerm.description}
+          more={aTerm.more || null}
+        />
       </ListItem>
     ));
 
