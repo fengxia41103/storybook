@@ -2,6 +2,8 @@ import { faker } from "@faker-js/faker";
 import { map, range } from "lodash";
 import React from "react";
 
+import { Button } from "@mui/material";
+
 import Glossary from "./index";
 
 export default {
@@ -11,10 +13,11 @@ export default {
 
 const exampleData = map(["a", "b"], (index) => ({
   index,
-  items: range(faker.random.numeric()).map(() => ({
+  items: range(faker.random.numeric()).map((x) => ({
     id: faker.animal.cat(),
     name: faker.animal.cat(),
-    sourceNote: faker.lorem.paragraph(3),
+    description: faker.lorem.paragraph(3),
+    more: x % 2 === 0 ? <Button>More info as button</Button> : null,
   })),
 }));
 
@@ -31,7 +34,7 @@ const fullAlphabetData = map(alphabet, (index) => ({
   items: range(faker.random.numeric()).map(() => ({
     id: faker.animal.cat(),
     name: faker.animal.cat(),
-    sourceNote: faker.lorem.paragraph(3),
+    description: faker.lorem.paragraph(3),
   })),
 }));
 

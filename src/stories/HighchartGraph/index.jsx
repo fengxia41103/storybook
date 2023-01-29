@@ -225,7 +225,12 @@ HighchartGraph.propTypes = {
   type: PropTypes.string.isRequired,
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   legendEnabled: PropTypes.bool.isRequired,
-  data: PropTypes.arrayOf(PropTypes.node).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      data: PropTypes.arrayOf(PropTypes.number),
+    }),
+  ).isRequired,
 
   footer: PropTypes.string,
   xLabel: PropTypes.string,
