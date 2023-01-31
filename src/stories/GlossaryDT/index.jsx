@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Chip, Stack, Typography } from "@mui/material";
 
 const GlossaryDT = (props) => {
   const { term, description, more = null } = props;
@@ -11,17 +11,23 @@ const GlossaryDT = (props) => {
 
   const whenMore = (
     <>
-      <ExpandLessIcon />
-      Show less
+      <Chip
+        color="secondary"
+        label="Show less"
+        deleteIcon={<ExpandLessIcon />}
+        onClick={() => setShowMore(!showMore)}
+      />
       <Box mt={3}>{more}</Box>
     </>
   );
 
   const whenLess = (
-    <>
-      <ExpandMoreIcon />
-      Show more
-    </>
+    <Chip
+      color="primary"
+      label="Show more"
+      deleteIcon={<ExpandMoreIcon />}
+      onClick={() => setShowMore(!showMore)}
+    />
   );
 
   return (
@@ -33,11 +39,7 @@ const GlossaryDT = (props) => {
         {description}
       </Typography>
 
-      {more ? (
-        <Box mt={3} onClick={() => setShowMore(!showMore)}>
-          {showMore ? whenMore : whenLess}
-        </Box>
-      ) : null}
+      {more ? <Box mt={3}>{showMore ? whenMore : whenLess}</Box> : null}
     </Stack>
   );
 };
