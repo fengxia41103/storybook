@@ -22,6 +22,7 @@ import NotFoundView from "./src/stories/NotFoundView";
 import Page from "./src/stories/Page";
 import PollResource from "./src/stories/PollResource";
 import RankChart from "./src/stories/RankChart";
+import SearchTextInput from "./src/stories/SearchTextInput";
 import SendEmail from "./src/stories/SendEmail";
 import ShowResource from "./src/stories/ShowResource";
 import SimpleSnackbar from "./src/stories/SimpleSnackbar";
@@ -56,4 +57,5 @@ export {
   TimeSeriesColumnChart,
   Glossary,
   GlossaryDT,
+  SearchTextInput,
 };
