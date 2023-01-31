@@ -41,6 +41,7 @@
     "react-chartjs-2": "^5.1.0",
     "react-debounce-input": "^3.3.0",
     "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.7",
     "restful-react": "^15.9.4",
@@ -146,7 +147,8 @@
   "main": "lib/index.js",
   "peerDependencies": {
     "react": "18.x",
-    "react-dom": "18.x"
+    "react-dom": "18.x",
+    "react-router-dom": "6.x"
   },
   "publishConfig": {
     "directory": "lib",

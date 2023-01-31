@@ -1,9 +1,9 @@
 import { countBy, map } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
-  Link,
   Paper,
   Table,
   TableBody,
@@ -33,7 +33,7 @@ const CountTable = (props) => {
           <TableCell>{key}</TableCell>
           <TableCell>{val}</TableCell>
           <TableCell>
-            <Link href={`${link_to_base}/${key}`} underline="none">
+            <Link to={`${link_to_base}/${key}`} underline="none">
               &rarr;
             </Link>
           </TableCell>

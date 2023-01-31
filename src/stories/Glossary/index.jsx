@@ -15,8 +15,12 @@ const Glossary = (props) => {
 
   const { terms } = props;
 
+  // index is the dictioinary lookup group, eg. "A", "B" for alphabet grouping
   const indexes = terms.map((t) => t.index);
 
+  // converting terms to a list of tabs, each represents a lookup group.  for
+  // example, if we group by alphabet, it will have tabs for "A", "B" and so on,
+  // just like a paper dictionary.
   const glossaryIndexes = map(terms, (term, index) => {
     const { index: key, items } = term;
 
