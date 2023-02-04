@@ -1,5 +1,6 @@
 import { faker } from "@faker-js/faker";
 import { range } from "lodash";
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 
 import { List, ListItem, Typography } from "@mui/material";
@@ -11,7 +12,8 @@ export default {
   component: SearchTextInput,
 };
 
-const ExampleCaller = () => {
+const ExampleCaller = (props) => {
+  const { timeout = 300 } = props;
   const [cats] = useState(range(10).map(() => faker.animal.cat()));
   const [searching, setSearching] = useState("");
 
@@ -27,6 +29,7 @@ const ExampleCaller = () => {
   return (
     <>
       <SearchTextInput
+        debounceTimeout={timeout}
         title="Filter by Cat Name"
         searching={searching}
         searchChangeHandler={search_filter_change}
@@ -38,6 +41,15 @@ const ExampleCaller = () => {
   );
 };
 
-const Template = () => <ExampleCaller />;
+ExampleCaller.propTypes = {
+  timeout: PropTypes.number,
+};
+
+const Template = (args) => <ExampleCaller {...args} />;
 
 export const Example = Template.bind({});
+
+export const OneSecondTimeoutExample = Template.bind({});
+OneSecondTimeoutExample.args = {
+  timeout: 1000,
+};
