@@ -1,3 +1,13 @@
+# [1.1.0-dev.4](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.3...v1.1.0-dev.4) (2023-02-04)
+
+
+### Features
+
+* Add ChipListWithClickToggle ([ec5db18](https://github.com/fengxia41103/storybook/commit/ec5db185096ab9a7d2710676e7f24a4650cb3108))
+* Add GlossaryDT and Glossary ([fbf5f31](https://github.com/fengxia41103/storybook/commit/fbf5f31208ef6d695a469bb907214347d29b1f2f))
+* Add MemoryRouter, SearchTextInput ([b4959f1](https://github.com/fengxia41103/storybook/commit/b4959f100178ebf960c4e6b8d0b9ea7b891a234b))
+* Add SearchInput ([1248d62](https://github.com/fengxia41103/storybook/commit/1248d62400d1c3556ea407abec18e51dee2eabca))
+
 # [1.1.0-dev.3](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.2...v1.1.0-dev.3) (2023-01-26)
 
 
