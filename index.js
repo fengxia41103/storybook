@@ -15,6 +15,7 @@ import Glossary from "./src/stories/Glossary";
 import GlossaryDT from "./src/stories/GlossaryDT";
 import HighchartGraph from "./src/stories/HighchartGraph";
 import HighlightedText from "./src/stories/HighlightedText";
+import KeyValueListItem from "./src/stories/KeyValueListItem";
 import LightTheme from "./src/stories/LightTheme";
 import Logo from "./src/stories/Logo";
 import MenuBar from "./src/stories/MenuBar";
@@ -60,4 +61,5 @@ export {
   GlossaryDT,
   SearchTextInput,
   ChipListWithClickToggle,
+  KeyValueListItem,
 };
