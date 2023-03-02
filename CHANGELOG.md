@@ -1,3 +1,10 @@
+# [1.1.0-dev.5](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.4...v1.1.0-dev.5) (2023-03-02)
+
+
+### Features
+
+* Add KeyValueListItem ([8b8128f](https://github.com/fengxia41103/storybook/commit/8b8128f7141a3f2387d2b0a96742ad4aabf8099d))
+
 # [1.1.0-dev.4](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.3...v1.1.0-dev.4) (2023-02-04)
 
 
