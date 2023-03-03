@@ -3,7 +3,6 @@ import AsDialog from "./src/stories/AsDialog";
 import AsVerticalStepper from "./src/stories/AsVerticalStepper";
 import ChipListWithClickToggle from "./src/stories/ChipListWithClickToggle";
 import ColoredNumber from "./src/stories/ColoredNumber";
-// components
 import CountCards from "./src/stories/CountCards";
 import CountTable from "./src/stories/CountTable";
 import DictCard from "./src/stories/DictCard";
@@ -60,6 +59,6 @@ export {
   Glossary,
   GlossaryDT,
   SearchTextInput,
-  ChipListWithClickToggle,
   KeyValueListItem,
+  ChipListWithClickToggle,
 };
