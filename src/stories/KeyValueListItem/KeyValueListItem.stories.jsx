@@ -33,3 +33,9 @@ LongTextKey.args = {
   label: faker.lorem.words(10),
   value: faker.lorem.words(2),
 };
+
+export const NullValue = Template.bind({});
+NullValue.args = {
+  label: faker.animal.cat(),
+  value: null,
+};

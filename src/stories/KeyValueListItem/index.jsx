@@ -27,13 +27,19 @@ const KeyValueListItem = (props) => {
   const { label, value } = props;
 
   return (
-    <Grid container spacing={1} key={label}>
+    <Grid
+      container
+      spacing={1}
+      key={label}
+      justify="flex-end"
+      alignItems="bottom"
+    >
       <Grid item lg={4} md={6} xs={12}>
         <Label>{label}</Label>
       </Grid>
 
       <Grid item lg={8} md={6} xs={12}>
-        <Value>{value}</Value>
+        <Value>{value || "n/a"}</Value>
       </Grid>
     </Grid>
   );
