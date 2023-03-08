@@ -6,7 +6,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Box, IconButton, Menu, Typography } from "@mui/material";
 
 const DropdownMenu = (props) => {
-  const { title, content, keep_open = false } = props;
+  const { title, content, keep_open = false, titleColor = "primary" } = props;
   const [anchorEl, setAnchorEl] = useState("");
 
   const handleClick = (event) => {
@@ -27,8 +27,8 @@ const DropdownMenu = (props) => {
         aria-label="options"
         onClick={handleClick}
       >
-        <MoreVertIcon />
-        <Typography>{title || null}</Typography>
+        <MoreVertIcon color={titleColor} />
+        <Typography color={titleColor}>{title || null}</Typography>
       </IconButton>
       <Menu
         anchorEl={anchorEl}
@@ -48,6 +48,7 @@ DropdownMenu.propTypes = {
   title: PropTypes.string,
   content: PropTypes.node.isRequired,
   keep_open: PropTypes.bool,
+  titleColor: PropTypes.string,
 };
 
 export default DropdownMenu;
