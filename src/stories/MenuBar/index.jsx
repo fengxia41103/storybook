@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Button, Grid, Link, Menu, MenuItem } from "@mui/material";
 
 const MenuBar = (props) => {
-  const { root, title, items } = props;
+  const { root, title, items, titleColor = "primary" } = props;
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -17,11 +17,13 @@ const MenuBar = (props) => {
   };
 
   const links = items.map((x) => {
-    const url = `${root}/${x.url}`;
+    const url = root ? `${root}/${x.url}` : x.url;
 
     return (
       <MenuItem key={x.url} onClick={handleClose}>
-        <Link href={url}>{x.text}</Link>
+        <Link href={url} underline="none">
+          {x.text}
+        </Link>
       </MenuItem>
     );
   });
@@ -32,6 +34,7 @@ const MenuBar = (props) => {
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
+        color={titleColor}
       >
         {title}
       </Button>
@@ -48,7 +51,6 @@ const MenuBar = (props) => {
 };
 
 MenuBar.propTypes = {
-  root: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -56,6 +58,8 @@ MenuBar.propTypes = {
       text: PropTypes.string,
     }),
   ).isRequired,
+  root: PropTypes.string,
+  titleColor: PropTypes.string,
 };
 
 export default MenuBar;

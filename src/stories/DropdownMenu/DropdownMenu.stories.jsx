@@ -66,3 +66,11 @@ Example.args = {
   content: <BasicList />,
   keep_open: true,
 };
+
+export const UseTitleColor = Template.bind({});
+UseTitleColor.args = {
+  title: faker.animal.cat(),
+  content: <BasicList />,
+  keep_open: true,
+  titleColor: "secondary",
+};
