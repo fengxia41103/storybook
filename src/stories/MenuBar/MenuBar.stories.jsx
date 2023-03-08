@@ -20,3 +20,14 @@ Example.args = {
     text: faker.animal.cat(),
   })),
 };
+
+export const UseTitleColor = Template.bind({});
+UseTitleColor.args = {
+  root: faker.internet.domainName(),
+  title: faker.random.alpha(5),
+  items: map(range(10), () => ({
+    url: faker.internet.url(),
+    text: faker.animal.cat(),
+  })),
+  titleColor: "secondary",
+};

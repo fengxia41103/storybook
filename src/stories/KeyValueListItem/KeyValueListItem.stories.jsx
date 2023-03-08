@@ -39,3 +39,17 @@ NullValue.args = {
   label: faker.animal.cat(),
   value: null,
 };
+
+export const LabelToLeft = Template.bind({});
+LabelToLeft.args = {
+  label: faker.animal.cat(),
+  value: null,
+  labelAlign: "left",
+};
+
+export const ValueToRight = Template.bind({});
+ValueToRight.args = {
+  label: faker.animal.cat(),
+  value: null,
+  valueAlign: "right",
+};
