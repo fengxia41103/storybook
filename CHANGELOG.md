@@ -1,3 +1,24 @@
+# [1.1.0-dev.1](https://github.com/fengxia41103/storybook/compare/v1.0.0...v1.1.0-dev.1) (2023-03-09)
+
+
+### Features
+
+* Add ChipListWithClickToggle ([2ad7dac](https://github.com/fengxia41103/storybook/commit/2ad7dac92909628046e3fa263e8074bb62e28d3d))
+* Add components to export ([5aa4942](https://github.com/fengxia41103/storybook/commit/5aa4942f9b8c43f4515354332f97e16b6e71caf6))
+* Add D3PlusChart, CountTable ([f3338cc](https://github.com/fengxia41103/storybook/commit/f3338cca92252b20ce8cf96a3884613513ca52a3))
+* Add Get to export ([2b15574](https://github.com/fengxia41103/storybook/commit/2b1557487a05993c43500eda22f24b2f505ba741))
+* Add GlossaryDT and Glossary ([a416c44](https://github.com/fengxia41103/storybook/commit/a416c44998d5bac5fe89a3ede87be1e8761ef466))
+* Add KeyValueListItem ([1a57c02](https://github.com/fengxia41103/storybook/commit/1a57c02219086490272a61c18b551c3e4de7d6c7))
+* Add MemoryRouter, SearchTextInput ([ed5d8c7](https://github.com/fengxia41103/storybook/commit/ed5d8c7c58ded0d21a347537fe60d91f64ace729))
+* Add SearchInput ([531b71e](https://github.com/fengxia41103/storybook/commit/531b71e3700dd746aeda00d4a1ca044cd7f99ded))
+* Battle with rollup ([95aa715](https://github.com/fengxia41103/storybook/commit/95aa715c3b05978f69b673d99e25c4b87138f7f8))
+* Export Get ([41d7a95](https://github.com/fengxia41103/storybook/commit/41d7a95016f281f5cb7bf18ce55e31b697190248))
+* Remove main.js ([e906f79](https://github.com/fengxia41103/storybook/commit/e906f79fcd0618db161874d4c0d9f1279f22a269))
+* Update rollup build config ([983c876](https://github.com/fengxia41103/storybook/commit/983c876888e5ecd7a9decfe500d6be7d81a584c2))
+* Update rollup config ([8d76c29](https://github.com/fengxia41103/storybook/commit/8d76c29d5df2dd5ee13cb61e5f17f9d23f140652))
+* Use react 18.2, set node env in rollup ([8bfa45b](https://github.com/fengxia41103/storybook/commit/8bfa45bb8a227957e401b5fa375dbd3be7c8109d))
+* Use styled for HighlightedText ([9fe529e](https://github.com/fengxia41103/storybook/commit/9fe529e96148bf5096bdef36cbe19f73febdf57a))
+
 # [1.1.0-dev.5](https://github.com/fengxia41103/storybook/compare/v1.1.0-dev.4...v1.1.0-dev.5) (2023-03-02)
 
 
