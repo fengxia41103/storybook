@@ -200,7 +200,7 @@
     "storybook": "start-storybook -p 6006",
     "test": "react-scripts test"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.js"
 }
