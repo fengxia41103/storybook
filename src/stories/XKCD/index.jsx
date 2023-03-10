@@ -30,7 +30,7 @@ const XKCD = () => {
 
   useEffect(() => getImage(), []);
 
-  return <Image src={img} width="80vw" onClick={getImage} />;
+  return <Image src={img} onClick={getImage} showLoading />;
 };
 
 export default XKCD;

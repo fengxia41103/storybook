@@ -21,6 +21,7 @@ const NotFoundView = () => (
       flexDirection="column"
       height="100%"
       justifyContent="center"
+      sx={{ maxWidth: "sm" }}
     >
       <Container maxWidth="sm">
         <Typography color="white" variant="h3">
