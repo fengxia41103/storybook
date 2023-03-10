@@ -1,3 +1,11 @@
+# [1.2.0-dev.1](https://github.com/fengxia41103/storybook/compare/v1.1.0...v1.2.0-dev.1) (2023-03-10)
+
+
+### Features
+
+* Add XKCD and new 404 page ([089a116](https://github.com/fengxia41103/storybook/commit/089a116756d8e37f25e5b9ba01a7708622ce0384))
+* Setup next version to be 1.2.0 ([a210fae](https://github.com/fengxia41103/storybook/commit/a210fae4e537cc126fafe55784b7bb5f6989766d))
+
 # [1.1.0](https://github.com/fengxia41103/storybook/compare/v1.0.0...v1.1.0) (2023-03-09)
 
 
