@@ -1,51 +1,37 @@
 import React from "react";
 
 import { Box, Container, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 
 import Page from "../Page";
 
-import PageNotFoundImage from "./assets/undraw_page_not_found_su7k.svg";
+import PageNotFoundImage from "./assets/404.jpg";
 
-const useStyles = makeStyles(() => ({
-  image: {
-    marginTop: 50,
-    display: "inline-block",
-    maxWidth: "100%",
-    width: 560,
-  },
-}));
-
-const NotFoundView = () => {
-  const classes = useStyles();
-
-  return (
-    <Page title="404">
-      <Box
-        display="flex"
-        flexDirection="column"
-        height="100%"
-        justifyContent="center"
-      >
-        <Container maxWidth="md">
-          <Typography align="center" color="textPrimary" variant="h1">
-            404: The page you are looking for isn’t here
-          </Typography>
-          <Typography align="center" color="textPrimary" variant="subtitle2">
-            You either tried some shady route or you came here by mistake.
-            Whichever it is, try using the navigation
-          </Typography>
-          <Box textAlign="center">
-            <img
-              alt="Under development"
-              className={classes.image}
-              src={PageNotFoundImage}
-            />
-          </Box>
-        </Container>
-      </Box>
-    </Page>
-  );
-};
+const NotFoundView = () => (
+  <Page
+    title="404"
+    style={{
+      backgroundImage: `url(${PageNotFoundImage})`,
+      backgroundSize: "cover",
+      height: "100vh",
+      color: "#f5f5f5",
+    }}
+  >
+    <Box
+      display="flex"
+      flexDirection="column"
+      height="100%"
+      justifyContent="center"
+    >
+      <Container maxWidth="sm">
+        <Typography color="white" variant="h3">
+          Ooops, I do not have what you are looking for.
+        </Typography>
+        <Typography color="white" variant="body1">
+          Come back some other time. I am working it right now.
+        </Typography>
+      </Container>
+    </Box>
+  </Page>
+);
 
 export default NotFoundView;
