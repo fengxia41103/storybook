@@ -1,3 +1,10 @@
+# [1.2.0-dev.2](https://github.com/fengxia41103/storybook/compare/v1.2.0-dev.1...v1.2.0-dev.2) (2023-03-11)
+
+
+### Features
+
+* Add xkcd and external img as background ([04cd39f](https://github.com/fengxia41103/storybook/commit/04cd39f8245b042cdf0c172f01454ecfb22e823d))
+
 # [1.2.0-dev.1](https://github.com/fengxia41103/storybook/compare/v1.1.0...v1.2.0-dev.1) (2023-03-10)
 
 
