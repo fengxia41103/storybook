@@ -1,3 +1,12 @@
+# [1.2.0-dev.3](https://github.com/fengxia41103/storybook/compare/v1.2.0-dev.2...v1.2.0-dev.3) (2023-03-13)
+
+
+### Features
+
+* Add highlight if given a active date ([8fddc1e](https://github.com/fengxia41103/storybook/commit/8fddc1eaa1404d3c54f1b98cfc43baddcb0e0482))
+* Add position param to TimelineNav ([7849736](https://github.com/fengxia41103/storybook/commit/784973674d05b7ee866a5f5b1fab3b19e35231e5))
+* Add TimelineNav ([029ea43](https://github.com/fengxia41103/storybook/commit/029ea4339001b9babf367c9634b4beb00a6ceb3b))
+
 # [1.2.0-dev.2](https://github.com/fengxia41103/storybook/compare/v1.2.0-dev.1...v1.2.0-dev.2) (2023-03-11)
 
 
