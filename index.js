@@ -28,6 +28,7 @@ import SendEmail from "./src/stories/SendEmail";
 import ShowResource from "./src/stories/ShowResource";
 import SimpleSnackbar from "./src/stories/SimpleSnackbar";
 import TimeSeriesColumnChart from "./src/stories/TimeSeriesColumnChart";
+import TimelineNav from "./src/stories/TimelineNav";
 
 // exports
 export {
@@ -61,4 +62,5 @@ export {
   SearchTextInput,
   KeyValueListItem,
   ChipListWithClickToggle,
+  TimelineNav,
 };
