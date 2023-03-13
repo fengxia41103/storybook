@@ -14,7 +14,7 @@ import {
 import { Button } from "@mui/material";
 
 const TimelineNav = (props) => {
-  const { dates, setDateFunc } = props;
+  const { dates, setDateFunc, position = "right" } = props;
 
   const days = uniq(map(dates, (d) => d.on));
   days.sort();
@@ -35,7 +35,7 @@ const TimelineNav = (props) => {
     </TimelineItem>
   ));
 
-  return <Timeline>{nav}</Timeline>;
+  return <Timeline position={position}>{nav}</Timeline>;
 };
 
 TimelineNav.propTypes = {
@@ -46,5 +46,6 @@ TimelineNav.propTypes = {
     }),
   ).isRequired,
   setDateFunc: PropTypes.func.isRequired,
+  position: PropTypes.string,
 };
 export default TimelineNav;

@@ -21,8 +21,22 @@ const clickOnDate = (val) => alert(val);
 
 const Template = (args) => <TimelineNav {...args} />;
 
-export const Example = Template.bind({});
-Example.args = {
+export const OnTheLeft = Template.bind({});
+OnTheLeft.args = {
   dates: exampleData,
   setDateFunc: clickOnDate,
+  position: "left",
+};
+
+export const OnTheRight = Template.bind({});
+OnTheRight.args = {
+  dates: exampleData,
+  setDateFunc: clickOnDate,
+};
+
+export const Alternate = Template.bind({});
+Alternate.args = {
+  dates: exampleData,
+  setDateFunc: clickOnDate,
+  position: "alternate",
 };
