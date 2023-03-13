@@ -13,11 +13,13 @@ export default {
 };
 
 const exampleData = map(range(10), () => ({
-  on: moment(faker.date.future()).format("LL"),
+  on: moment(faker.date.future()).format("yyyy-mm-DD"),
   content: <Typography>{faker.lorem.paragraph(5)}</Typography>,
 }));
 
-const clickOnDate = (val) => alert(val);
+const clickOnDate = (val) => {
+  alert(val);
+};
 
 const Template = (args) => <TimelineNav {...args} />;
 
@@ -39,4 +41,12 @@ Alternate.args = {
   dates: exampleData,
   setDateFunc: clickOnDate,
   position: "alternate",
+};
+
+export const HaveActiveDate = Template.bind({});
+HaveActiveDate.args = {
+  dates: exampleData,
+  setDateFunc: clickOnDate,
+  position: "left",
+  activeDate: exampleData[0].on,
 };

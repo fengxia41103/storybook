@@ -1,4 +1,5 @@
 import { map, uniq } from "lodash";
+import moment from "moment";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -14,10 +15,13 @@ import {
 import { Button } from "@mui/material";
 
 const TimelineNav = (props) => {
-  const { dates, setDateFunc, position = "right" } = props;
+  const { dates, setDateFunc, position = "right", activeDate } = props;
 
   const days = uniq(map(dates, (d) => d.on));
   days.sort();
+
+  const isActive = (date) =>
+    activeDate && moment(activeDate).format("LL") === moment(date).format("LL");
 
   const nav = map(days, (on) => (
     <TimelineItem>
@@ -26,11 +30,14 @@ const TimelineNav = (props) => {
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
-        <Button variant="outlined" onClick={() => setDateFunc(on)}>
+        <Button
+          variant="outlined"
+          onClick={() => setDateFunc(on)}
+          color={isActive(on) ? "secondary" : "primary"}
+        >
           <CalendarMonthIcon />
           {on}
         </Button>
-        {dates[on]}
       </TimelineContent>
     </TimelineItem>
   ));
@@ -46,6 +53,7 @@ TimelineNav.propTypes = {
     }),
   ).isRequired,
   setDateFunc: PropTypes.func.isRequired,
+  activeDate: PropTypes.string,
   position: PropTypes.string,
 };
 export default TimelineNav;
