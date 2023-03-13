@@ -1,3 +1,10 @@
+# [1.2.0-dev.4](https://github.com/fengxia41103/storybook/compare/v1.2.0-dev.3...v1.2.0-dev.4) (2023-03-13)
+
+
+### Features
+
+* Export TimelineNav ([5699881](https://github.com/fengxia41103/storybook/commit/569988129dc42b843b6b0bebb941abd8e359c70b))
+
 # [1.2.0-dev.3](https://github.com/fengxia41103/storybook/compare/v1.2.0-dev.2...v1.2.0-dev.3) (2023-03-13)
 
 
